@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSRF Vulnerable Form</title>
+</head>
+<body>
+  <h1>CSRF Insecure Pattern</h1>
+  <form action='vulnerable_confirm.php'>
+    <label for="amount">Amount</label>
+    <input name="amount">
+    <br>
+    <label for="account">Account</label>
+    <input type="text" name="account">
+    <br>
+    <input type="submit">
+  </form>
+</body>
+</html>
