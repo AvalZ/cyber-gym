@@ -2,7 +2,7 @@
 Deliberately vulnerable PHP scripts for Web Security training
 
 ## Setup
-1. Install Vagrant
+1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 2. `cd websec_tutorial/`
 3. `vagrant up`
 4. Browse http://192.168.33.10
