@@ -9,6 +9,10 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 
 $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
+//     SELECT * FROM accounts WHERE email='arthur@guida.com' AND password=SHA('Bathrobe')
+//     SELECT * FROM accounts WHERE email='arthur@guida.com' -- ' AND password=SHA('')
+//
+
 $result = $con->query($query);
 
 if($result->num_rows > 0) {
