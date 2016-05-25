@@ -9,7 +9,7 @@ $_SESSION['antiCsrf'] = $csrfToken;
 
 //Transfer form with the hidden field
 $form = '
-<form name="transferForm" action="confirm.php" method="POST">
+<form name="transferForm" action="confirm.php" method="GET">
   <div class="box">
 <h1>BANK XYZ - Confirm Transfer</h1>
 <p>

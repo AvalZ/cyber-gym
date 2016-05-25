@@ -13,6 +13,11 @@ if (!isset($_GET['email'])) {
 
   $result = $con->query($query);
 
+  if ($con->error) {
+    echo "Query error: " .$con->error;
+  }
+
+
   echo "<table>";
   echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th></tr>";
 
