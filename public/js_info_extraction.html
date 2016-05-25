@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>Extracting Document Info with JavaScript</TITLE>
+<H1>Extracting Document Info with JavaScript</H1>
+<HR>
+<SCRIPT TYPE="text/javascript">
+function referringPage() {
+ if (document.referrer.length == 0) {
+  return("<I>none</I>");
+  } else {
+  return(document.referrer); }
+ }
+ document.writeln
+   ("Document Info:\n" + "<UL>\n" +
+    " <LI><B>URL:</B> " + document.location + "\n" +
+    " <LI><B>Modification Date:</B> " + "\n" +
+    document.lastModified + "\n" +
+    " <LI><B>Title:</B> " + document.title + "\n" +
+    " <LI><B>Referring page:</B> " + referringPage() + "\n" + "</UL>");
+ document.writeln
+   ("Browser Info:" + "\n" + "<UL>" + "\n" +
+    " <LI><B>Name:</B> " + navigator.appName + "\n" +
+    " <LI><B>Version:</B> " + navigator.appVersion + "\n" + "</UL>");
+</SCRIPT>
+<HR>
+</HTML>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+   <link href="style.css" rel="stylesheet" type="text/css">
+<title></title>
+</head>
+
+<body>
+<h1>PHP Cookies</h1>
+
+<hr />
+<p class="intro">A cookie is often used to identify a user.</p>
+<hr />
+
+<h2>What is a Cookie? </h2>
+<p>A cookie is often used to identify a user. A cookie is a small file that the 
+server embeds on the user's computer. Each time the same computer requests a 
+page with a browser, it will send the cookie too. With PHP, you can both create 
+and retrieve cookie values.</p>
+<hr />
+
+<h2>How to Create a Cookie?</h2>
+<p>The setcookie() function is used to set a cookie.</p>
+
+<p><b>Note:</b> The setcookie() function must appear BEFORE the &lt;html&gt; tag. </p>
+<h3>Syntax</h3>
+<table width="100%" border="1" class="ex" cellspacing="0"><tr><td>
+<pre>setcookie(name, value, expire, path, domain);</pre>
+</td></tr></table>
+
+<h3>Example</h3>
+<p>In the example below, we will create a cookie named &quot;user&quot; and assign the 
+value &quot;Alex Porter&quot; to it. We also specify that the cookie should expire after 
+one hour:</p>
+
+<table width="100%" border="1" class="ex" cellspacing="0"><tr><td>
+<pre>&lt;?php 
+setcookie(&quot;user&quot;, &quot;Alex Porter&quot;, time()+3600);
+?&gt;</pre>
+<pre>&lt;html&gt;
+&lt;body&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td></tr></table>
+<p><b>Note: </b>The value of the cookie is automatically URLencoded when 
+sending the cookie, and automatically decoded when received (to prevent 
+URLencoding, use setrawcookie() instead).</p>
+
+<hr />
+
+<h2>How to Retrieve a Cookie Value?</h2>
+<p>The PHP $_COOKIE variable is used to 
+retrieve a cookie value. <br />
+<br />
+In the example below, we retrieve the value of the cookie named &quot;user&quot; and 
+display it on a page:</p>
+<table width="100%" border="1" class="ex" cellspacing="0" id="table3"><tr><td>
+<pre>&lt;?php<br />// Print a cookie<br />echo $_COOKIE[&quot;user&quot;];</pre>
+
+<pre>// A way to view all cookies
+print_r($_COOKIE);
+?&gt;</pre>
+</td></tr></table>
+
+<p>In the following example we use the isset() function to find out if a cookie 
+has been set:</p>
+<table width="100%" border="1" class="ex" cellspacing="0" id="table4"><tr><td>
+<pre>&lt;html&gt;
+&lt;body&gt;</pre>
+<pre>&lt;?php
+if (isset($_COOKIE[&quot;user&quot;]))
+  echo &quot;Welcome &quot; . $_COOKIE[&quot;user&quot;] . &quot;!&lt;br /&gt;&quot;;
+else
+  echo &quot;Welcome guest!&lt;br /&gt;&quot;;
+?&gt;</pre>
+
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td></tr></table>
+<br />
+<hr />
+
+<h2>How to Delete a Cookie?</h2>
+<p>When deleting a cookie you should assure that the expiration date is in the 
+past.</p>
+<p>Delete example:</p>
+<table width="100%" border="1" class="ex" cellspacing="0" id="table5"><tr><td>
+<pre>&lt;?php 
+// set the expiration date to one hour ago<br />setcookie(&quot;user&quot;, &quot;&quot;, time()-3600);
+?&gt;</pre>
+
+</td></tr></table>
+<br />
+<hr />
+
+<h2>What if a Browser Does NOT Support Cookies?</h2>
+<p>If your application deals with browsers that do not support cookies, you will 
+have to use other methods to pass information from one page to another in your 
+application. One method is to pass the data through forms (forms and user input are described 
+earlier in this tutorial).</p>
+<p>The form below passes the user input to &quot;welcome.php&quot; when the user clicks on 
+the &quot;Submit&quot; button:</p>
+<table width="100%" border="1" class="ex" cellspacing="0" id="table1"><tr><td>
+
+<pre>&lt;html&gt;
+&lt;body&gt;</pre>
+<pre>&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;
+
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot; /&gt;
+&lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;</pre>
+<pre>&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+</td></tr></table>
+<p>Retrieve the values in the &quot;welcome.php&quot; file like this:</p>
+<table width="100%" border="1" class="ex" cellspacing="0" id="table2"><tr><td>
+<pre>&lt;html&gt;
+&lt;body&gt;</pre>
+<pre>Welcome &lt;?php echo $_POST[&quot;name&quot;]; ?&gt;.&lt;br /&gt;
+
+You are &lt;?php echo $_POST[&quot;age&quot;]; ?&gt; years old.</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td></tr></table>
+<br />
+<hr />
+
+<a href="php_file_upload.asp"><img alt="previous" border="0" src="/images/btn_previous.gif" width="100" height="20" /></a>
+<a href="php_sessions.asp"><img alt="next" border="0" src="/images/btn_next.gif" width="100" height="20" /></a>
+
+<br />
+<hr />
+
+
+
+<hr>
+<address></address>
+<!-- hhmts start -->Last modified: Thu Oct 18 06:44:39 CEST 2007 <!-- hhmts end -->
+</body> </html>
