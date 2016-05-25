@@ -1,4 +1,4 @@
-# websec_tutorial
+# Web Security Tutorial scripts
 Deliberately vulnerable PHP scripts for Web Security training
 
 ## Prerequisites
@@ -6,7 +6,9 @@ Deliberately vulnerable PHP scripts for Web Security training
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ## Setup
-1. `git clone https://github.com/AvalZ/websec_tutorial.git` or `git clone git@github.com:AvalZ/websec_tutorial.git` or just download the zip from [here](https://github.com/AvalZ/websec_tutorial/archive/master.zip) and unzip it in a local folder.
+1. `git clone https://github.com/AvalZ/websec_tutorial.git`
+   or `git clone git@github.com:AvalZ/websec_tutorial.git`
+   or just download the zip from [here](https://github.com/AvalZ/websec_tutorial/archive/master.zip) and unzip it in a local folder.
 2. `cd websec_tutorial/` (or `cd websec-tutorial-master` if you downloaded the zip)
 3. `vagrant up`
 4. Browse http://192.168.33.10
