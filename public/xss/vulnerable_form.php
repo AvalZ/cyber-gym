@@ -8,5 +8,6 @@ if (!isset($_GET['name'])) {
 
 } else {
   $name = $_GET['name'];
-  echo "<h1>Hi $name!";
+  echo "<h1>Hi $name!</h1>";
+  //   "<h1>Hi <strong>Boh</strong>!</h1>"
 }
