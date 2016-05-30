@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
   <title>SQL Injection</title>
 </head>
 <body>
@@ -14,6 +16,42 @@
     <div class="row">
       <div class="col-md-12">
         <h2 class="text-center">Bypass mysql_real_escape_string</h2>
+        <code>
+          (From <a href="http://php.net/manual/it/mysqli.real-escape-string.php">PHP manual</a>)
+          <br>
+          <i>string mysqli_real_escape_string ( mysqli $link , string $escapestr )</i>
+          <br>
+          <b>link</b> <br>
+          Procedural style only: A link identifier returned by mysqli_connect() or mysqli_init()
+          <br>
+          <b>escapestr</b> <br>
+          The string to be escaped.<br>Characters encoded are <kbd>NUL</kbd> (0x00), <kbd>\n</kbd>, <kbd>\r</kbd>, <kbd>\</kbd>, <kbd>'</kbd>, <kbd>"</kbd>, and <kbd>SUB</kbd> (Ctrl-Z <i>or</i> 0x1A).
+        </code>
+        <br>
+        <br>
+        <p>mysql_real_escape_string <i>does NOT</i> encode all MySQL special chars, it only encodes chars that may terminate a string. (Given a specific charset)</p>
+        <p>String output must be enclosed in quotes to be escaped correctly, which is not always the case.</p>
+
+        <p><b>Example</b></p>
+        <pre>
+&lt;?php
+// ... open connection $con
+
+<b>$id</b> = $con-&gt;real_escape_string($_POST['id']);
+$query = "SELECT * FROM accounts WHERE id=<b>$id</b>";
+
+$con-&gt;query($query);
+
+// ... get query results
+
+$con-&gt;close();
+        </pre>
+
+        <p>If <kbd>2</kbd> is inserted, the query will return the record with id = 2.</p>
+
+        <p>This code is exploitable, since it does not require any special character to terminate the string in order to add commands.</p>
+        <p>If <kbd>2 AND 1=1</kbd> is inserted, the query will return all records (1=1 is an always true clause) in the <i>accounts</i> table.</p>
+        <p>If <kbd>2 AND 1=0</kbd> is inserted, the query will return no record at all (1=0 is an always false clause).</p>
       </div>
     </div>
   </div>
