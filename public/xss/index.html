@@ -13,13 +13,16 @@
         <h1 class="text-center">Cross-Site Scripting - XSS</h1>
         <script> alert("POP"); </script>
 
-        <p><h2>Code for the popup:</h2></p>
+        <p>Code for the popup:</p>
 
-        <p>&lt;script&gt; alert(&quot;POP&quot;); &lt;/script&gt;</p>
+        <code>&lt;script&gt; alert(&quot;POP&quot;); &lt;/script&gt;</code>
         
-        <p><h2>Escaped string: </h2></p>
-        <p>&amp;lt;script&amp;gt; alert(&amp;quot;POP&amp;quot;); &amp;lt;/script&amp;gt;</p>
+        <p><h2>Escaping HTML Entities: </h2></p>
+        This is what the above code looks like when escaped: <br>
+        <code>&amp;lt;script&amp;gt; alert(&amp;quot;POP&amp;quot;); &amp;lt;/script&amp;gt;</code>
 
+        <br>
+        <br>
         <p><u>Unescaped code is <b>interpreted</b> and <b>executed</b> on the Client Side (i.e. your browser)</u></p>
       </div>
     </div>
