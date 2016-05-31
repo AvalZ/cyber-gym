@@ -1,5 +1,5 @@
 <?php
-include('mysql_credentials.php');
+include('../db/mysql_credentials.php');
 
 if (!isset($_GET['email'])) {
   echo "<form action=''>";

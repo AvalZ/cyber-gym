@@ -17,7 +17,7 @@ foreach ($records as $rec) {
     VALUE ('$rec[0]', '$rec[1]', '$rec[2]', SHA1('$rec[3]'))";
 
   if($con->query($query)) {
-    echo "Records inserted\n";
+    echo "Record for ". $rec[0] . " " . $rec[1]. " inserted<br>";
   } else {
     echo "Error: " . $query . "<br>" . $con->error;
   }

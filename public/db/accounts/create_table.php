@@ -14,7 +14,7 @@ $query = 'CREATE TABLE accounts(
   )';
 
 if($con->query($query)) {
-  echo "Table 'accounts' created successfully";
+  echo "Table 'accounts' created successfully<br>";
 } else {
   echo "Error: " . $query . "<br>" . $con->error;
 }
