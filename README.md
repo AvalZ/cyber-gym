@@ -13,6 +13,5 @@ Deliberately vulnerable PHP scripts for Web Security training
 2. `cd websec_tutorial/` (or `cd websec_tutorial-master` if you downloaded the zip)
 3. `vagrant up`
 4. Browse http://192.168.33.10
-5. Create a table named 'accounts' or go to http://192.168.33.10/sqli/create_table.php
-6. Fill the table with records, or go to: http://192.168.33.10/sqli/seed_table.php
-7. Done!
+5. Create a table named 'accounts' or go to http://192.168.33.10/db/setup_db.php
+6. Done!
