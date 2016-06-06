@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <style>
+    pre {
+      counter-reset: line-numbering;
+      font-family: Menlo, Monaco, monospace;
+      background-color: #333;
+      padding: 5px;
+      color: #CCC;
+      border-radius: 3px;
+      word-break: break-word;
+    }
+    pre .line::before {
+      content: counter(line-numbering);
+      counter-increment: line-numbering;
+      padding-right: 1em;
+      /* space after numbers */
+      width: 1.5em;
+      text-align: right;
+      opacity: 0.5;
+    }
+  </style>
+  <title>CSRF</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Cross-Site Request Forgery</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Anti-CSRF protections are good, but XSS is better</h2>
+        <p>If the site has a XSS foothold, any anti-CSRF protection is just another step in the exploit development, nothing but a minor speed-bump.</p>
+        <p>If anything, CSRF should be considered an obligatory post-exploitation activity, should any XSS vulnerability be present.</p>
+
+        <br>
+        <p>Same goes for <i>X-Frame-Options</i> not being set to DENY (or <i>X-Frame-Options: SAMEORIGIN</i> if the very vulnerable site has a XSS vulnerability, as mentioned above): a protected form can be injected in another vulnerable site as an iFrame, along with an automated JavaScript script like this: <br>
+          <pre class="pre-scrollable">
+<span class="line">&lt;script&gt;</span>
+<span class="line">  </span>
+<span class="line">  // Find target form inside the injected iFrame </span>
+<span class="line">  var targetForm = window.frames[0].document.forms[0];</span>
+<span class="line">  </span>
+<span class="line">  // Set target form inputs to desired values</span>
+<span class="line">  targetForm.input1.value = &quot;value1&quot;;</span>
+<span class="line">  targetForm.input2.value = &quot;value2&quot;;</span>
+<span class="line">  </span>
+<span class="line">  // Submit target form</span>
+<span class="line">  targetForm.submit();</span>
+<span class="line">  </span>
+<span class="line">&lt;/script&gt;</span></pre>
+          (could be seen as an Automated Clickjacking)
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
