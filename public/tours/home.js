@@ -1,7 +1,6 @@
 (function(){
 
   var tour = new Tour({
-    storage: false,
     steps: [
     {
       element: '#server-side',
