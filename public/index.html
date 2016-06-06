@@ -7,6 +7,9 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-tour.min.css">
+  <style>
+    body { padding-top: 70px; }
+  </style>
   
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>  
@@ -14,13 +17,26 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <h1 class="text-center">Web Security</h1>
-      <div class="col-md-12">
-        <p class="pull-right"><a class="btn btn-info" href="db">DB Setup</a></p>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="navbar-header">
+            <a href="/" class="navbar-brand">WebSec Tutorial</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/support/capture_page.php">Capture</a></li>
+              <li><a href="/db">DB Setup</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+  </nav>
+
+  <div class="container">
 
     <div class="row">
       <div id="server-side" class="col-md-6">
