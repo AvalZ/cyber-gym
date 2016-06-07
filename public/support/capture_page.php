@@ -22,24 +22,26 @@ if (!empty(array_filter($_GET))) {
     <style>body { padding-top: 70px; }</style>
     </head>
     <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="navbar-header">
-              <a href="/" class="navbar-brand">WebSec Tutorial</a>
-            </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li class="active"><a href="/support/capture_page.php">Capture</a></li>
-                <li><a href="/db">DB Setup</a></li>
-              </ul>
-            </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="navbar-header">
+            <a href="/" class="navbar-brand">WebSec Tutorial</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/support/capture_page.php">Capture</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/db">DB Setup</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <div class="container">
     <br>
