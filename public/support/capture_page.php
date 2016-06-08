@@ -33,6 +33,7 @@ if (!empty(array_filter($_GET))) {
             <ul class="nav navbar-nav">
               <li><a href="/">Home</a></li>
               <li class="active"><a href="/support/capture_page.php">Capture</a></li>
+              <li><a href="/support/key_logger_page.php">KeyLogger</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/db">DB Setup</a></li>
