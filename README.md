@@ -18,3 +18,4 @@ Deliberately vulnerable PHP scripts for Web Security training
 
 ## Useful links
 * [Slides - Common Attacks](https://docs.google.com/presentation/d/1rRpO9-9agNAUETXPjfsm7dMUZ3EPfKxWcaP-W8kt0ZM/edit?usp=sharing)
+* [mysqli\_real\_escape\_string gotchas](https://avalz89.wordpress.com/2016/06/23/debunking-the-mysql_real_escape_string-myth/)
