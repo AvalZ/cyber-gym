@@ -14,11 +14,6 @@ if (!isset($_GET['email'])) {
 
   $result = $con->query($query);
 
-  if ($con->error) {
-    echo "Query error: " .$con->error;
-  }
-
-
   echo "Password sent to your email address";
 
 
