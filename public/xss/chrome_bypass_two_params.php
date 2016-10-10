@@ -3,7 +3,9 @@
 if (!isset($_GET['first_name']) && !isset($_GET['last_name'])) {
   echo "<h1>Hi! What's your name?</h1>";
   echo "<form action='' method='GET'>";
-  echo "<input type='text' name='name'>";
+  echo "<input type='text' name='first_name'>";
+  echo "<input type='text' name='last_name'>";
+  echo "<input type='submit'>";
   echo "</form>";
 
 } else {
