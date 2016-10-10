@@ -7,7 +7,7 @@ if (!isset($_GET['name'])) {
   echo "</form>";
 
 } else {
+  header("X-XSS-Protection: 0");
   $name = $_GET['name'];
   echo "<h1>Hi $name!</h1>";
-  //   "<h1>Hi <strong>Boh</strong>!</h1>"
 }
