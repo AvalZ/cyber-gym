@@ -14,8 +14,9 @@ if (isset($_POST['email'])) {
     $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
 
     $result = $con->query($query);
+    var_dump($result);
 
-    if($result->num_rows == 0) {
+    if($result->num_rows == 1) {
       $row = $result->fetch_assoc();
       $first_name = $row["first_name"];
       $last_name = $row["last_name"];
