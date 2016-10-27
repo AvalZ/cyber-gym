@@ -8,6 +8,6 @@ if (!isset($_GET['name'])) {
   echo "</form>";
 
 } else {
-  $name = preg_replace("/script/i", "code", $_GET['name']);
+  $name = preg_replace("/script/i", "", $_GET['name']);
   echo "<h1>Hi $name!</h1>";
 }
