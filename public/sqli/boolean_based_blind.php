@@ -17,11 +17,11 @@ if (!isset($_GET['email'])) {
   if ($con->error) {
     // echo "Query error: " .$con->error;
     // Removed Error-Based SQLi
-    echo "Query error";
+    die("Query error");
   }
 
 
-  if( $row = $result->num_rows > 0) {
+  if( @$row = $result->num_rows > 0) {
     echo "YES";
   } else {
     echo "NO";
