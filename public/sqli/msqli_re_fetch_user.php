@@ -8,11 +8,12 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
   if ($con->connect_error) die ("Connection failed: " .$con->connect_error);
 
   $id = $con->real_escape_string($_GET['id']);
+  // $id = mysqli_real_escape_string($_GET['id']);
   //    escapes NUL(0x00) \n \r \ ' " CTRL-Z(0x1A)
   //    NOT something like - % ( ) | & etc...
 
   $query = "SELECT * FROM accounts WHERE id=$id";
-         // SELECT * FROM accounts WHERE id=1
+         // SELECT * FROM accounts WHERE id=1 UNION ALL SELECT 1,2,3,4 -- -
          // NOT => SELECT * FROM accounts WHERE id='1'
          //   mysql_real_escape_string ONLY works on string literals
 
