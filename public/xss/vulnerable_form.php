@@ -8,6 +8,7 @@ if (!isset($_GET['name'])) {
 
 } else {
   header("X-XSS-Protection: 0");
+  // header("X-XSS-Protection: 1");
   $name = $_GET['name'];
   echo "<h1>Hi $name!</h1>";
 }
