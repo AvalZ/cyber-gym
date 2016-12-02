@@ -12,7 +12,6 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 
 $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
-       // SELECT * FROM accounts WHERE email='any' AND password=SHA('') OR True -- ')
 
 $result = $con->query($query);
 
