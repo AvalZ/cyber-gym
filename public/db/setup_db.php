@@ -10,3 +10,6 @@ echo "<hr>";
 echo "<h3>Creating 'datacapture' table</h3><br>";
 include('datacapture/create_table.php');
 echo "<hr>";
+echo "<h3>Creating 'messages' table</h3><br>";
+include('messages/create_table.php');
+echo "<hr>";
