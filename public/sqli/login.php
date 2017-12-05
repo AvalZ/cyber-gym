@@ -12,6 +12,14 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 
 $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
+    // $email = "adhsaodhsadoshad"
+    // $password = " asdsadas') OR ('1'='1";
+//
+// $user = $_POST['user'];
+// $pass = $_POST['pass'];
+// SELECT * FROM users WHERE username='$user' AND password=SHA(CONCAT($pass, salt))
+// | username | password                 | salt        |
+// | io       | hdshdbhhahd0u4haho4has0h | sa89964y9ad |
 
 $result = $con->query($query);
 

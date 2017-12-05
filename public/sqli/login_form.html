@@ -11,11 +11,7 @@
       <h1 class="text-center">Login</h1>
       <div class="col-md-6 col-md-offset-3">
         <form action="login.php" method="POST">
-          <label for="email">Email</label>
-          <input type="text" name="email">
-          <br/>
-          <label for="pass">Password</label>
-          <input type="password" name="pass">
+          SELECT FROM users WHERE username='<input type="text" name="email">' AND pass='<input type="password" name="pass">'
           <br/>
           <input type="submit">
         </form>
