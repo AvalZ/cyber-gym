@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <ul>
+        <li>Loading detection</li>
+        <script src='/support/event_detection.js'></script>
+        <li>Dispatching events</li>
+        <script>
+            var e = new MouseEvent("click", {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            window.dispatchEvent(e);
+        </script>
+    </ul>
+
+</body>
+</html>

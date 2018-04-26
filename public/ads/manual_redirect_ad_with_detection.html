@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/support/redirect_detection.js"></script>
+</head>
+<body>
+    
+<script>
+    console.log("Starting redirection");
+    // window.location = "http://" + window.location.hostname + "/ads/malware_ad.html";
+
+    function clickHandler() {
+        window.location = "http://" + window.location.hostname + "/ads/malware_ad.html";
+    }
+</script>
+
+
+<button type="button" onclick="javascript:clickHandler()" value="red">Redirect</button>
+
+</body>
+</html>

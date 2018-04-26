@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/support/onload_detection.js"></script>
+    <script src="/support/redirect_detection.js"></script>
+</head>
+<body>
+    
+    <p>Redirecting to malware page</p>
+
+<script>
+    window = new Proxy(window, {});
+
+    window.addEventListener('load', function() {
+        window.location = "http://" + window.location.hostname + "/ads/malware_ad.html";
+    });
+</script>
+</body>
+</html>
