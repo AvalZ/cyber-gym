@@ -13,7 +13,7 @@ $pass = $_POST['pass'];
 
 $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
     // $email = "adhsaodhsadoshad"
-    // $password = " asdsadas') OR ('1'='1";
+    // $password = " asdsadas') OR ('1'='1"
 //
 // $user = $_POST['user'];
 // $pass = $_POST['pass'];
