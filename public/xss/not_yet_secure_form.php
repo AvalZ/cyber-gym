@@ -1,3 +1,6 @@
+# exploit #1: <script><script>alert(1)</script>
+# exploit #2: <a onmouseover="alert(1)" href="#">read this!</a>
+
 <?php
 
 if (!isset($_GET['name'])) {
