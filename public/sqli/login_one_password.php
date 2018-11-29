@@ -9,7 +9,7 @@ if (isset($_POST['email'])) {
     if ($con->connect_error) die ("Connection failed");
 
     $email = $con->real_escape_string($_POST['email']);
-    $pass = $_POST['pass'];
+    $pass = $con->real_escape_string($_POST['pass']);
 
     $query = "SELECT * FROM accounts WHERE email='$email' AND password=SHA('$pass')";
 
