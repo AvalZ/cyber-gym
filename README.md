@@ -24,3 +24,8 @@ An array of vulnerable Web pages to test security tools or manual assessment.
 * [Slides - Common Attacks](https://docs.google.com/presentation/d/1rRpO9-9agNAUETXPjfsm7dMUZ3EPfKxWcaP-W8kt0ZM/edit?usp=sharing)
 * [mysqli\_real\_escape\_string gotchas](https://avalz.it/2016/06/23/debunking-the-mysql_real_escape_string-mith/)
 * [Slides - Web Security Hands-on](https://docs.google.com/presentation/d/1L27fhQWU8Cz9VrfSrNn-SrMiBvcx7tlXa2m5ot4IXCM/edit?usp=sharing)
+
+## ZenHackademy 
+
+* [Part 1 - Client-Side Security](https://docs.google.com/presentation/d/1JEYzoVQ7WgJkt2X_U2rKFBqPpKimLVWPvToiyr8vTBM/edit?usp=sharing)
+* [Part 2 - Server-Side Security](https://docs.google.com/presentation/d/1z_vHrtTMHP4Xz9w2IZpNaVqn1SuAjq_azk8Njtcro0I/edit?usp=sharing)
