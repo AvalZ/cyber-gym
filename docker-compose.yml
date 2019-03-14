@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  database:
+    image: mysql:5
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: scotchbox
+    ports:
+      - "127.0.0.1:3306:3306"
+    networks:
+      - database
+  webserver:
+    image: php:apache
+    depends_on: ['database']
+    environment:
+      MYSQL_HOST: database
+    command:
+      - /bin/sh
+      - -ec
+      - |-
+        # Install PHP extensions
+        docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+        # Set database URL
+        sed -i -e 's/localhost/database/' /var/www/html/db/mysql_credentials.php
+        # Launch webserver
+        apache2-foreground
+        # Reset the file to default
+        sed -i -e 's/database/localhost/' /var/www/html/db/mysql_credentials.php
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./public:/var/www/html
+    networks:
+      - database
+
+networks:
+  database:
+    driver: bridge
+

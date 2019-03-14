@@ -3,11 +3,30 @@
 
 An array of vulnerable Web pages to test security tools or manual assessment.
 
-## Prerequisites
+## Usage (Docker)
+
+### Prerequisites
+* [Docker and docker-compose](https://docker.io)
+
+### Setup
+
+1. Clone this repository
+    * `git clone https://github.com/AvalZ/cyber-gym.git` _or_
+    * `git clone git@github.com:AvalZ/cyber-gym.git` _or_
+    * download the zip from [here](https://github.com/AvalZ/cyber-gym/archive/master.zip) and unzip it in a local folder.
+2. `cd cyber-gym/` (or `cd cyber-gym-master` if you downloaded the zip)
+3. `docker-compose up`
+4. Browse http://127.0.0.1:8080
+5. Create a table named 'accounts' or go to http://127.0.0.1:8080/db/setup_db.php
+6. Done!
+
+## Usage (Vagrant)
+
+### Prerequisites
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 
-## Setup
+### Setup
 
 1. Clone this repository
     * `git clone https://github.com/AvalZ/cyber-gym.git` _or_
